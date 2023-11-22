@@ -1,4 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("hardhat-gas-reporter");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 // Add optimizer & evmVersion here
@@ -12,4 +13,7 @@ module.exports = {
       }
     }
   },
+  gasReporter: {
+    enabled: (process.env.REPORT_GAS) ? true : false
+  }
 };
